@@ -1,5 +1,9 @@
 package item1;
 
+
+import lombok.Getter;
+
+@Getter
 public class Engine{
     private String name;
     private int power;
