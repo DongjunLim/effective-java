@@ -39,7 +39,7 @@ public class SpellChecker {
     private static List<String> suggestion(String type) {}
 }
 ```
-위의 코드 2, 3은 여러 종류의 사전이 있을 경우를 생각한다면 좋지 못한 코드다. 여러 종류의 dictionary 객체가 필요할 경우 확장하지 못하기 때문이다.
+위 코드 2, 3은 여러 종류의 사전이 있을 경우를 생각한다면 좋지 못한 코드다. 여러 종류의 dictionary 객체가 필요할 경우 확장하지 못하기 때문이다.
 이렇게 객체가 사용하는 자원에 따라 동작이 달라지는 클래스는 싱글턴 방식이나 정적 유틸리티 방식이 적합하지 않다.
 <br><br>
 
@@ -56,5 +56,5 @@ public class SpellChecker {
     private List<String> suggestion(String type) {}
 }
 ```
-위의 코드는 외부에서 dictionary 객체를 받아와 내부 dictionary에 주입하여 객체의 의존도를 낮췄다.
+위 코드는 외부에서 dictionary 객체를 받아와 내부 dictionary에 주입하여 객체의 의존도를 낮췄다.
 이를 통해 Lexicon 클래스에 변경이 생기더라도 Spellchecker를 고치지 않아도 되며, 여러 종류의 dictionary를 만들 수도 있다.
